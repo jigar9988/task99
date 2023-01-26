@@ -10,7 +10,7 @@ const UserHome = () => {
     const navigate = useNavigate()
     const location = useLocation()
     useEffect(() => {
-        if (location.search == "?ref=adduser" || location.search == "?ref=edituser") {
+        if (location.search === "?ref=adduser" || location.search === "?ref=edituser") {
             getUsersData()
         }
     }, [location])
@@ -24,7 +24,7 @@ const UserHome = () => {
 
     async function getFilterData(filterData) {
 
-        if (filterData == '') {
+        if (filterData === '') {
             await getUsersData()
         } else {
             setUsers(
@@ -45,7 +45,7 @@ const UserHome = () => {
 
             {
                 isGetUserClicked ?
-                    users.length != 0 ? <table>
+                    users.length !== 0 ? <table>
                         <thead>
                             <tr>
                                 <th>Name</th>

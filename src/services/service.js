@@ -2,6 +2,7 @@ import axios from "axios"
 
 let config = {
     headers: {
+        // eslint-disable-next-line no-useless-concat
         'Authorization': 'Bearer ' + 'cac6d785467b8ff4532269ca5ce205f9ea9d266a79c84befdeb08311d501e480'
     }
 }

@@ -20,6 +20,7 @@ const EditUser = () => {
             getUser()
 
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const navigate = useNavigate()
 
@@ -42,15 +43,15 @@ const EditUser = () => {
                 </div>
                 <div>
                     <label htmlFor="male">Male</label>
-                    <input type="radio" required checked={user.gender == "male" ? true : false} onClick={(e) => setUser({ ...user, gender: e.target.id })} name="gender" id='male' />
+                    <input type="radio" required checked={user.gender === "male" ? true : false} onClick={(e) => setUser({ ...user, gender: e.target.id })} name="gender" id='male' />
                     <label htmlFor="female">Female</label>
-                    <input type="radio" required checked={user.gender == "female" ? true : false} onClick={(e) => setUser({ ...user, gender: e.target.id })} name="gender" id='female' />
+                    <input type="radio" required checked={user.gender === "female" ? true : false} onClick={(e) => setUser({ ...user, gender: e.target.id })} name="gender" id='female' />
                 </div>
                 <div>
                     <label htmlFor="active">Active</label>
-                    <input type="radio" required checked={user.status == "active" ? true : false} onClick={(e) => setUser({ ...user, status: e.target.id })} name="status" id='active' />
+                    <input type="radio" required checked={user.status === "active" ? true : false} onClick={(e) => setUser({ ...user, status: e.target.id })} name="status" id='active' />
                     <label htmlFor="inactive">Inactive</label>
-                    <input type="radio" required checked={user.status == "inactive" ? true : false} onClick={(e) => setUser({ ...user, status: e.target.id })} name="status" id='inactive' />
+                    <input type="radio" required checked={user.status === "inactive" ? true : false} onClick={(e) => setUser({ ...user, status: e.target.id })} name="status" id='inactive' />
                 </div>
                 <button className='edit_btn' type='submit' >Edit User</button>
             </form>

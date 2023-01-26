@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { deleteUserService } from '../services/service'
 import { useNavigate } from 'react-router-dom'
 const UserListing = (props) => {
-    const { items, index, getUsersData } = props.items
+    const { items, getUsersData } = props.items
     const navigate = useNavigate()
     const [isDeletedClicked, setIsDeletedClicked] = useState(false)
     async function deleteUser(id) {
