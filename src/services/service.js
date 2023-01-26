@@ -26,7 +26,6 @@ export const addUserService = async (user) => {
     await axios.post(BASE_URL, user,
         config)
         .then((response) => {
-            console.log(response);
         })
         .catch((e) => console.log(e.message))
 }
@@ -35,7 +34,6 @@ export const deleteUserService = async (id) => {
     await axios.delete(`${BASE_URL}${id}`,
         config)
         .then((response) => {
-            console.log(response);
         })
         .catch((e) => console.log(e.message))
 }
@@ -44,7 +42,6 @@ export const editUserService = async (user, id) => {
     await axios.put(`${BASE_URL}${id}`, user,
         config)
         .then((response) => {
-            console.log(response);
         })
         .catch((e) => console.log(e.message))
 }

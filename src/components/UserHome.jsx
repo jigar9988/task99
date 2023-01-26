@@ -16,7 +16,6 @@ const UserHome = () => {
     }, [location])
 
     async function getUsersData() {
-        console.log("get called");
         setIsGetUserClicked(true)
         var users = await getUsersService()
         setUsers(users)
